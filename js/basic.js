@@ -58,3 +58,13 @@ return new newCoffeeObj();
 coffees.forEach(function(coffee){
 	printPrice(coffee.getPrice(),coffee.getLabel());
 });
+coffeeTypes.reduce(function(previous, current) {
+	var newCoffee = coffeeSizes.map(function(mixin) {
+	 // `plusMixin` function for functional mixins, see Ch.7
+	 	var newCoffeeObj = plusMixin(current, mixin);
+		return new newCoffeeObj();
+	});
+	return previous.concat(newCoffee);
+},[]).forEach(function(coffee) {
+	printPrice(coffee.getPrice(),coffee.getLabel());
+});
