@@ -45,19 +45,7 @@ var coffeeSizes = [small, medium, large];
 // and put them into a new array
 coffeeTypes.push(Peruvian);
 coffeeSizes.push(extraLarge);
-var coffees = coffeeTypes.reduce(function(previous, current) {
-	var newCoffee = coffeeSizes.map(function(mixin) {
-// `plusmix` function for functional mixins, see Ch.7
-var newCoffeeObj = plusMixin(current, mixin);
-return new newCoffeeObj();
-});
-	return previous.concat(newCoffee);
-},[]);
-// we've now defined how to get the price and label for each
-// coffee type and size combination, now we can just print them
-coffees.forEach(function(coffee){
-	printPrice(coffee.getPrice(),coffee.getLabel());
-});
+
 coffeeTypes.reduce(function(previous, current) {
 	var newCoffee = coffeeSizes.map(function(mixin) {
 	 // `plusMixin` function for functional mixins, see Ch.7

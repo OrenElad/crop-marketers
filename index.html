@@ -1,11 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="he" >
+  <head>
+    <title>הר סיני</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Crop Marketers</title>
-</head>
-<body>
-    <h5>Test</h5>
-    <script src = js/basic.js></script>
-</body>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/mystyle.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+     <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+  <div class="mycontainer">
+      <!-- My Nav Bar    ------------------------>
+      <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">לוגו הארגון</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse ">
+              <ul class="nav navbar-nav navbar-right  "  id="menu_items">
+                  <li class="active navbar-right"><a href="#">דף הבית</a></li>
+                  <li class="navbar-right" id="who-we-are"><a href="#">מי אנחנו</a></li>
+                  <li class="navbar-right">
+                      <a href="#" class="dropdown-toggle " data-toggle="dropdown">מוצרים <b class="caret"></b></a>
+                      <ul class="dropdown-menu ">
+                          <li ><a href="#">קמח מלא</a></li>
+                          <li ><a href="#">שיפון</a></li>
+                          <li ><a href="#">כוסמין</a></li>
+                          <li ><a href="#">דבש</a></li>
+                      </ul>
+                  </li>
+                  <li class="navbar-right"><a href="#">צרו קשר</a></li>
+                  <li  class="navbar-right">
+                      <a href="#" class="dropdown-toggle " data-toggle="dropdown">עזרה <b class="caret"></b></a>
+                      <ul class="dropdown-menu ">
+                          <li ><a href="#">בלוג</a></li>
+                          <li ><a href="#">פורום</a></li>
+                          <li ><a href="#">שאלות ותשובות</a></li>
+                          <li ><a href="#">גירסה 1.0.1</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <button type="button" class="btn btn-default navbar-btn  btn-inverse  navbar-left  btn-xs "  >Register</button>
+              <button type="button" class="btn btn-default navbar-btn  navbar-left btn-xs btn-primary"  >Sign in</button>
+          </div><!-- /.navbar-collapse -->
+
+      </nav> <!-- End of Nav Bar    ------------------------>
+      <!-- My Carousel     -->
+      <div id="carousel-example" class="carousel slide">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+              <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example" data-slide-to="1"></li>
+              <li data-target="#carousel-example" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="item active">
+                  <img src="gallery/img1.jpg" class="img-responsive" alt="Cinque Terre" width="1400" height="1">
+                  <div class="carousel-caption" >  סלייד ראשון .
+                      <button  type="button" class="btn btn-primary  btn-sm ">לפרטים</button>
+                  </div>
+
+              </div>
+              <div class="item ">
+                  <img src="gallery/img2.jpg" alt="IMG2">
+                  <div class="carousel-caption">  סלייד שני .   </div>
+              </div>
+              <div class="item ">
+                  <img src="gallery/img3.jpg" alt="IMG3">
+                  <div class="carousel-caption">  סלייד שלישי ואחרון .   </div>
+              </div>
+          </div>
+      </div>
+          <!-- Wrapper for slides -->
+      </div><!-- End of My Carousel     -->
+  <!-- My  Products     -->
+    <section id="products" class="row">
+          <div class="col-sm-4" >
+              <h4>גבינות</h4>
+              <img src="gallery/thmb1.jpg" class="img-rounded" alt="Cinque Terre" width="200" height="200" >
+              <p>גבינות צאן מיוחדות</p>
+              <br>
+              <button  type="button" >סל מוצרים</button>
+          </div>
+          <div class="col-sm-4" >
+              <h4>דבש</h4>
+              <img src="gallery/thmb2.jpg" class="img-rounded" alt="Cinque Terre" width="200" height="200">
+              <p>דבש אורגני מהר חברון</p>
+              <br>
+              <button  type="button" >סל מוצרים</button>
+          </div>
+          <div class="col-sm-4" >
+              <h4>קמח</h4>
+              <img src="gallery/thmb3.jpg"  class="img-rounded" alt="Cinque Terre" width="200" height="200" >
+              <p>קמח ארצישראלי משובח במגוון סוגים</p>
+              <br>
+              <button  type="button" >סל מוצרים</button>
+          </div>
+     </section><!--End of My  Products     -->
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.carousel').carousel({
+                interval: 3500
+            })
+        });
+    </script>
+
+  </body>
 </html>
